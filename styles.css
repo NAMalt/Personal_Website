@@ -82,6 +82,6 @@ footer{
     text-align:center;
     background-color: var(--palette-lightblue);
     color: var(--palette-grey);
-    padding: 5px;
+    padding: 2px;
     border: 2px solid var(--palette-black)
 }
