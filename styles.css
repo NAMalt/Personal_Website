@@ -1,0 +1,86 @@
+/* Colors */
+:root{
+    --palette-navy: #1b263b;
+    --palette-blue: #415a77;
+    --palette-black: #0D1B2A;
+    --palette-lightblue: #778da9;
+    --palette-grey: #e0e1dd;
+
+
+}
+
+/* CSS Reset */
+*{
+    box-sizing:border-box;
+}
+
+/* Text */
+body{
+    font-family: 'Sugoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+    color: var(palette-black);
+}
+
+h1{
+    font-size: 6rem;
+    color: var(palette-navy);
+    text-align: center;
+    @media(width < 738px){
+        font-size: 3rem;
+    }
+}
+
+h2{
+    font-size: 3rem;
+    color: var(--palette-orange)
+}
+
+
+p{
+}
+
+main ul {
+    list-style-type: circle;
+}
+
+header ul{
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration: none;
+
+}
+
+.bluegrey-text{
+    color: var(--palette-bluegrey);
+}
+
+.wrapper{
+    inline-size: 1000px;
+    margin-inline: auto;
+}
+
+
+.banner{
+    inline-size: 100%;
+}
+
+/* Links */
+a{
+    color: var(--palette-bluegrey)
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--palette-orange)
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    background-color: var(--palette-lightblue);
+    color: var(--palette-grey);
+    padding: 5px;
+    border: 2px solid var(--palette-black)
+}
