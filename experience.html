@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="description" content="A Personal Website for Nick Maltais" />
+        <meta name="description" content="Nick Maltais - Education, work experience, leadership activities, and technical skills in computer science and software development." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Nick Maltais - Personal Website</title>
-
+        <title>Nick Maltais - Experience</title>
         <link href="styles.css" rel="stylesheet" />
     </head>
     <body>
@@ -13,58 +12,105 @@
             <header>
                 <nav>
                     <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="experience.html" class="active">Experience</a></li>
                         <li><a href="projects.html">Projects</a></li>
                     </ul>
                 </nav>
             </header>
+            
             <main>
                 <h1>Experience</h1>
+                
+                <section class="education">
                     <h2>Education</h2>
-                        <p>Stonehill College | Easton, Massachusetts
-                        <br>Bachelor of Science in Computer Science
-                        <br>Expected Graduation: May 2027
-                        <br>Minors: Biology, Data Analytics
-                        <br>GPA: 3.57/4.0
-                        <br>Honors: Dean's List (3 semesters)
-                        </p>
+                    <div class="experience-item">
+                        <h3>Stonehill College</h3>
+                        <p class="location">Easton, Massachusetts</p>
+                        <p class="degree">Bachelor of Science in Computer Science</p>
+                        <p>Expected Graduation: May 2027</p>
+                        <ul>
+                            <li>Minors: Biology, Data Analytics</li>
+                            <li>GPA: 3.57</li>
+                            <li>Honors: Dean's List (3 semesters)</li>
+                        </ul>
+                    </div>
+                </section>
 
+                <section class="work">
                     <h2>Work Experience</h2>
-                    <h3>Incorporated Proprietors of Nonquitt | Dartmouth, Massachusetts
-                        <br>Multi-Role Team Member | Summers 2019 – Present</h3>
-                    <p>
+                    <div class="experience-item">
+                        <h3>Incorporated Proprietors of Nonquitt</h3>
+                        <p class="location">Dartmouth, Massachusetts</p>
+                        <p class="job-title">Multi-Role Team Member</p>
+                        <p class="date">Summers 2019 – Present</p>
                         <ul>
                             <li>Manage daily operations of tennis pro shop, including inventory management, sales transactions, and customer relations</li>
                             <li>Oversee private beach operations: monitor water conditions, maintain facility cleanliness, and coordinate equipment distribution for club members</li>
                             <li>Support grounds maintenance team with golf course upkeep, including landscape care and facility improvements</li>
                             <li>Developed strong customer service skills while balancing multiple responsibilities in a fast-paced seasonal environment</li>
                         </ul>
-                    </p>
-        
-                    <h2>Leadership & Activities</h2>
-                        <h3>Camp Invention STEM Instructor | Summer 2021</h3>
-                             <ul>
-                                 <li>Developed and implemented engaging STEM curriculum for elementary students</li>
-                                <li>Fostered a positive and inclusive learning environment</li>
-                                <li>Collaborated with fellow instructors to enhance program delivery</li>
-                            </ul>
-                        <h3>Intramural Basketball | 2025 – Present</h3>
-                                <ul>
-                                    <li>Participate in competitive intramural basketball league, demonstrating teamwork and sportsmanship</li>
-                                    <li>Contributed to team strategy and performance, leading to successful seasons</li>
-                                </ul>
+                    </div>
+                </section>
+    
+                <section class="leadership">
+                    <h2>Leadership &amp; Activities</h2>
+                    
+                    <div class="experience-item">
+                        <h3>Camp Invention STEM Instructor</h3>
+                        <p class="date">Summer 2021</p>
+                        <ul>
+                            <li>Developed and implemented engaging STEM curriculum for elementary students</li>
+                            <li>Fostered a positive and inclusive learning environment</li>
+                            <li>Collaborated with fellow instructors to enhance program delivery</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <h3>Intramural Basketball</h3>
+                        <p class="date">2025 – Present</p>
+                        <ul>
+                            <li>Participate in competitive intramural basketball league, demonstrating teamwork and sportsmanship</li>
+                            <li>Contributed to team strategy and performance, leading to successful seasons</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="skills">
                     <h2>Skills</h2>
-                            <ul>
-                                <li>Proficient in Java, Python, and R programming languages</li>
-                                <li>Experienced with macOS, Windows, and Ubuntu Linux operating systems</li>
-                                <li>Passionate about physical fitness, vintage electronics repair and modification, and film criticism</li>
-                            </ul>
+                    <div class="skills-container">
+                        <div class="skill-category">
+                            <h3>Technical Skills</h3>
+                            <p>
+                                <ul>
+                                    <li>Java</li>
+                                    <li>Python</li>
+                                    <li>R</li>
+                                    <li>macOS</li>
+                                    <li>Windows</li>
+                                    <li>Ubuntu Linux</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Interests</h3>
+                            <p>
+                                <ul>
+                                    <li>Physical Fitness</li>
+                                    <li>Vintage Electronics Repair &amp; Modification</li>
+                                    <li>Film Reviewing</li>
+                                    <li>Competitive Gaming</li>
+                                    <li>Building Lego</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </section>
             </main>
             
             <footer>
-                <p>Email: nmaltais@students.stonehill.edu</p>
-                <p>GitHub: <a href="https://github.com/NAMalt">https://github.com/NAMalt</a></p>
+                <p>Email: <a href="mailto:nmaltais@students.stonehill.edu">nmaltais@students.stonehill.edu</a></p>
+                <p>GitHub: <a href="https://github.com/NAMalt">github.com/NAMalt</a></p>
             </footer>
         </div>
     </body>
