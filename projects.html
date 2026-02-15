@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="description" content="A Personal Website for Nick Maltais" />
+        <meta name="description" content="Nick Maltais - Software development projects including AI games, desktop applications, media servers, and bioinformatics research." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Nick Maltais - Personal Website</title>
-
+        <title>Nick Maltais - Projects</title>
         <link href="styles.css" rel="stylesheet" />
     </head>
     <body>
@@ -13,57 +12,68 @@
             <header>
                 <nav>
                     <ul>
-                        <li><a href="home.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="experience.html">Experience</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="projects.html" class="active">Projects</a></li>
                     </ul>
                 </nav>
             </header>
+            
             <main>
                 <h1>Projects</h1>
-                <p>Here are some of the projects I've worked on that showcase my technical 
-                   skills and interests in AI, software development, and computational biology.
+                <p class="intro">
+                    Here are some of the projects I've worked on that showcase my technical 
+                    skills and interests in AI, software development, and computational biology.
                 </p>
 
-                    <h2>Ultimate Tic-Tac-Toe</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h2>Ultimate Tic-Tac-Toe</h2>
+                        <img src="images/UltimateTTT.jpg" alt="Ultimate Tic-Tac-Toe game interface showing a 3x3 grid of tic-tac-toe boards with X and O markers" />
                         <p>
-                        Engineered an interactive game featuring intelligent computer opponents 
-                        powered by the Minimax algorithm. Implemented multiple difficulty levels 
-                        to provide challenging strategic gameplay for users of all skill levels.
-                        <br>Tech Stack: Python
+                            Engineered an interactive game featuring intelligent computer opponents 
+                            powered by the Minimax algorithm. Implemented multiple difficulty levels 
+                            to provide challenging strategic gameplay for users of all skill levels.
                         </p>
-                        <img src="images/UltimateTTT.jpg" alt="Screenshot of Ultimate Tic-Tac-Toe UI" width="300" />
+                        <p class="tech-stack"><strong>Tech Stack:</strong> Python</p>
+                    </article>
 
-                    <h2>Workout Tracker Application</h2>
+                    <article class="project-card">
+                        <h2>Workout Tracker Application</h2>
+                        <img src="images/GymWorkoutTracker.png" alt="Workout Tracker desktop application displaying exercise logging interface with sets, reps, and weight tracking fields" />
                         <p>
-                        Designed and built a cross-platform desktop app that helps users log 
-                        exercises and visualize progress over time. Features an intuitive interface 
-                        for tracking sets, reps, and weights across workout sessions.
-                        <br>Tech Stack: Electron, JavaScript
+                            Designed and built a cross-platform desktop app that helps users log 
+                            exercises and visualize progress over time. Features an intuitive interface 
+                            for tracking sets, reps, and weights across workout sessions.
                         </p>
-                        <img src="images/GymWorkoutTracker.png" alt="Screenshot of Workout Tracker Application UI" width="800" />
+                        <p class="tech-stack"><strong>Tech Stack:</strong> Electron, JavaScript</p>
+                    </article>
               
-                    <h2>Home Media Server</h2>
+                    <article class="project-card">
+                        <h2>Home Media Server</h2>
                         <p>
-                        Architected a personal streaming solution by repurposing hardware and 
-                        deploying Jellyfin on Ubuntu Linux. Successfully configured multi-user 
-                        access for seamless media delivery across devices.
-                        <br>Tech Stack: Ubuntu Linux, Jellyfin
+                            Architected a personal streaming solution by repurposing hardware and 
+                            deploying Jellyfin on Ubuntu Linux. Successfully configured multi-user 
+                            access for seamless media delivery across devices.
                         </p>
+                        <p class="tech-stack"><strong>Tech Stack:</strong> Ubuntu Linux, Jellyfin</p>
+                    </article>
                     
-                    <h2>Bioinformatics Research</h2>
+                    <article class="project-card">
+                        <h2>Bioinformatics Research</h2>
                         <p>
-                        Conducted independent research investigating computational approaches 
-                        to biological data analysis. Explored applications of AI and machine 
-                        learning in genomic sequencing and protein structure prediction.
-                        <br>Focus Areas: Computational Biology, Machine Learning
-                        </p> 
-
+                            Conducted independent research investigating computational approaches 
+                            to biological data analysis. Explored applications of AI and machine 
+                            learning in genomic sequencing and protein structure prediction.
+                        </p>
+                        <p class="tech-stack"><strong>Focus Areas:</strong> Computational Biology, Machine Learning</p>
+                    </article>
+                </div>
             </main>
             
             <footer>
-                <p>Email: nmaltais@students.stonehill.edu</p>
-                <p>GitHub: <a href="https://github.com/NAMalt">https://github.com/NAMalt</a></p>
+                <p>Email: <a href="mailto:nmaltais@students.stonehill.edu">nmaltais@students.stonehill.edu</a></p>
+                <p>GitHub: <a href="https://github.com/NAMalt">github.com/NAMalt</a></p>
             </footer>
         </div>
     </body>
