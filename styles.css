@@ -10,8 +10,8 @@
 /* CSS Reset */
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0; /* Remove default margin and padding so that the bar is flush with the top of the page */
+    margin: 0; /* This makes the banner go all the way to the top of the page */
+    padding: 0;
 }
 
 html {
@@ -50,28 +50,37 @@ p {
     margin-bottom: 1rem;
 }
 
-/* Wrapper */
-.wrapper { /*So the content doesn't stretch across the entire width of the page, which can be hard to read on large screens*/
+/* LAYOUT */ 
+
+/* .wrapper: Constrains content to 1000px so it doesn't stretch too
+   wide on large screens. margin: 0 auto centers it horizontally. */
+.wrapper {
     max-width: 1000px; 
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-/* Header and Navigation - FLEXBOX */
-header {  /*Give the nav bar a background */
+/* HEADER & NAVIGATION */
+
+header {
     background-color: var(--palette-navy);
     padding: 1rem 0;
     margin-bottom: 2rem;
 }
 
+/* nav ul: Flexbox row of nav links, centered with even gaps between them.
+   flex-wrap: wrap means they'll stack to a new line on narrow screens. */
 nav ul { 
     list-style-type: none;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
+/* nav a: Styles each nav link — light text, slightly larger font, bold weight.
+   padding gives each link a clickable area; border-radius rounds its hover bg.
+   transition animates the background-color change on hover. */
 nav a {
     text-decoration: none;
     color: var(--palette-grey);
@@ -82,101 +91,87 @@ nav a {
     transition: background-color 0.3s ease;
 }
 
+/* Highlights the nav link when hovered, focused (keyboard nav), or
+   when it has the .active class (i.e. the current page). */
 nav a:hover,
 nav a:focus-visible,
 nav a.active {
     background-color: var(--palette-blue);
 }
 
-/* Main Content */
+/* MAIN CONTENT */
+
+/* main: min-height stops the footer from creeping up on short pages.
+   margin-bottom gives breathing room above the footer. */
 main {
     min-height: 60vh;
     margin-bottom: 3rem;
 }
 
-/* Home Page Styles */
+/* HOME PAGE */
+
+/* .hero: Centers the intro section (profile image, name, tagline) and
+   adds space below it before the next section. */
 .hero {
     text-align: center;
     margin-bottom: 3rem;
 }
 
+/* .tagline: Slightly larger, blue subtitle text that sits below the name. */
 .tagline {
     font-size: 1.2rem;
     color: var(--palette-blue);
     margin-bottom: 2rem;
 }
 
+/* .profile-img: Fixed 400px wide photo clipped to a circle shape.
+   height: auto keeps the natural aspect ratio of the photo otherwise it looks like an oval */
 .profile-img {
     width: 400px;
-    height: auto; /* This is to maintain the aspect ratio but the cirlce itself looks more like an oval on desktop */
+    height: auto;
     border-radius: 50%;
     border: 4px solid var(--palette-navy);
     margin: 1rem 0;
 }
 
+/* .about: Narrows the bio text to 800px and centers it for comfortable reading. */
 .about {
     max-width: 800px;
     margin: 0 auto 3rem;
 }
 
-/* Quick Stats Grid - CSS GRID */
-.quick-stats {
-    margin: 3rem 0;
-}
+/* EXPERIENCE PAGE */
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.stat-item {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.stat-icon {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.stat-item p {
-    font-size: 0.9rem;
-    color: var(--palette-navy);
-    margin: 0;
-}
-
-/* Experience Page Styles */
+/* .experience-item: White card with a soft shadow for each job/education entry.
+   border-radius rounds the corners; padding gives content internal breathing room. */
 .experience-item {
     background-color: white;
     padding: 1.5rem;
     margin-bottom: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* .location: Italic blue text used to display city/country of a role. */
 .location {
     color: var(--palette-blue);
     font-style: italic;
 }
 
-.degree,
-.job-title {
+/* .degree / .job-title: Bold, dark text that makes the role name stand out. */
+.degree, .job-title {
     font-weight: 600;
     color: var(--palette-navy);
 }
 
+/* .date: Muted, slightly smaller text for date ranges — visually secondary
+   to the role name but still readable. */
 .date {
     color: var(--palette-lightblue);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
 
+/* Bullet list styling for responsibility/achievement lists inside main content. */
 main ul {
     list-style-type: disc;
     margin-left: 2rem;
@@ -187,13 +182,21 @@ main li {
     margin-bottom: 0.5rem;
 }
 
-/* Skills Section - FLEXBOX */
+/* =====================
+   SKILLS SECTION
+   ===================== */
+
+/* .skills-container: Flexbox row of skill category cards.
+   flex-wrap: wrap lets them stack vertically on narrow screens. */
 .skills-container {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
+/* .skill-category: Each individual skill card (e.g. "Languages", "Tools").
+   flex: 1 makes all cards share available width equally.
+   min-width: 250px prevents them from getting too narrow before wrapping. */
 .skill-category {
     flex: 1;
     min-width: 250px;
@@ -203,17 +206,23 @@ main li {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Resets top margin on the h3 inside a card so there's no extra gap at the top. */
 .skill-category h3 {
     margin-top: 0;
     font-size: 1.2rem;
 }
 
+/* Removes the default paragraph bottom margin inside skill cards. */
 .skill-category p {
     margin: 0;
     line-height: 1.8;
 }
 
-/* Projects Page Styles - CSS GRID */
+/* =====================
+   PROJECTS PAGE
+   ===================== */
+
+/* .intro: Centered intro paragraph above the projects grid, capped at 800px. */
 .intro {
     text-align: center;
     max-width: 800px;
@@ -221,6 +230,7 @@ main li {
     font-size: 1.1rem;
 }
 
+/* .projects-grid: CSS Grid with two equal columns and a gap between cards. */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -228,6 +238,8 @@ main li {
     margin-top: 2rem;
 }
 
+/* .project-card: White card for each project.
+   transition enables a smooth lift animation when the card is hovered. */
 .project-card {
     background-color: white;
     padding: 1.5rem;
@@ -236,16 +248,19 @@ main li {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* On hover: lifts the card up 5px and deepens the shadow to emphasise the lift. */
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Resets the top margin on h2 inside a card so it sits flush at the top. */
 .project-card h2 {
     margin-top: 0;
     font-size: 1.5rem;
 }
 
+/* Project screenshot/thumbnail: fills the full card width, maintains aspect ratio. */
 .project-card img {
     width: 100%;
     height: auto;
@@ -253,6 +268,7 @@ main li {
     margin: 1rem 0;
 }
 
+/* .tech-stack: Small blue label listing the technologies used in a project. */
 .tech-stack {
     color: var(--palette-blue);
     font-size: 0.95rem;
@@ -260,7 +276,10 @@ main li {
     margin-bottom: 0;
 }
 
-/* Links */
+/* =====================
+   LINKS
+   ===================== */
+
 a {
     color: var(--palette-blue);
 }
@@ -270,7 +289,11 @@ a:focus-visible {
     color: var(--palette-navy);
 }
 
-/* Footer */
+/* =====================
+   FOOTER
+   ===================== */
+
+/* footer: Dark bar at the bottom mirroring the header. Light text on dark bg. */
 footer {
     text-align: center;
     background-color: var(--palette-navy);
@@ -279,6 +302,7 @@ footer {
     margin-top: 3rem;
 }
 
+/* Footer links use light grey with underline to stay visible on the dark background. */
 footer a {
     color: var(--palette-grey);
     text-decoration: underline;
@@ -292,9 +316,10 @@ footer p {
     margin: 0.5rem 0;
 }
 
-/* MEDIA QUERIES - Responsive Design */
+/* =====================
+   RESPONSIVE — TABLET (max 768px)
+   ===================== */
 
-/* Tablets and smaller */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
@@ -305,23 +330,28 @@ footer p {
     }
     
     nav ul {
-        gap: 1rem;
+        gap: 1rem; /* Tighten nav link spacing on smaller screens */
     }
     
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Halve stats columns from 4 to 2 */
     }
     
+    /* .projects-grid: Collapses from 2 columns to 1 so cards don't get too narrow. */
     .projects-grid {
         grid-template-columns: 1fr;
     }
     
+    /* .skills-container: Stacks skill cards vertically instead of side-by-side. */
     .skills-container {
         flex-direction: column;
     }
 }
 
-/* Mobile phones */
+/* =====================
+   RESPONSIVE — MOBILE (max 480px)
+   ===================== */
+
 @media (max-width: 480px) {
     h1 {
         font-size: 2rem;
@@ -331,19 +361,22 @@ footer p {
         font-size: 1rem;
     }
     
+    /* nav ul: Stacks nav links into a vertical column on very small screens. */
     nav ul {
         flex-direction: column;
         gap: 0.5rem;
     }
     
-    
+    /* .profile-img: On mobile, forces an equal 250x250px square then clips it
+       to a perfect circle using object-fit: cover (avoids the oval problem from
+       the desktop style where only width was set). */
     .profile-img {
-    width: 250px;
-    height: 250px;  
-    border-radius: 50%;
-    border: 4px solid var(--palette-navy);
-    margin: 1rem 0;
-    object-fit: cover;  
-    object-position: center; 
-}
+        width: 250px;
+        height: 250px;  
+        border-radius: 50%;
+        border: 4px solid var(--palette-navy);
+        margin: 1rem 0;
+        object-fit: cover;  
+        object-position: center; 
+    }
 }
