@@ -22,7 +22,7 @@ html {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.6; /* Vertical Spacing between lines of text */
     color: var(--palette-black);
 }
 
@@ -53,11 +53,11 @@ p {
 /* LAYOUT */ 
 
 /* .wrapper: Constrains content to 1000px so it doesn't stretch too
-   wide on large screens. margin: 0 auto centers it horizontally. */
+   wide on large screens. margin: 0 auto centers it horizontally with the parent container. */
 .wrapper {
     max-width: 1000px; 
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1rem; /* Adds horizontal padding on both sides of the wrapper */
 }
 
 /* HEADER & NAVIGATION */
@@ -71,24 +71,24 @@ header {
 /* nav ul: Flexbox row of nav links, centered with even gaps between them.
    flex-wrap: wrap means they'll stack to a new line on narrow screens. */
 nav ul { 
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    list-style-type: none; /* Removes default bullet points from the list */
+    display: flex; /* Flexbox layout for horizontal alignment of nav links */
+    justify-content: center; /* Centers the nav links horizontally within the nav bar */
+    gap: 2rem; /* Adds space between each nav link */
+    flex-wrap: wrap; /* Allows nav links to wrap to a new line on smaller screens*/
 }
 
 /* nav a: Styles each nav link — light text, slightly larger font, bold weight.
    padding gives each link a clickable area; border-radius rounds its hover bg.
    transition animates the background-color change on hover. */
 nav a {
-    text-decoration: none;
-    color: var(--palette-grey);
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    text-decoration: none; /* Removes the default underline from links */
+    color: var(--palette-grey); /* Light grey text for nav links*/
+    font-size: 1.1rem; 
+    font-weight: 600; /* Semi-bold weight to make nav links stand out */
+    padding: 0.5rem 1rem; /* Adds vertical and horizontal padding to increase the clickable area of nav links */
+    border-radius: 4px; /* Rounds the corners of the background when hovered */
+    transition: background-color 0.3s ease; /* Transition for background color on hover */
 }
 
 /* Highlights the nav link when hovered, focused (keyboard nav), or
@@ -125,7 +125,7 @@ main {
 }
 
 /* .profile-img: Fixed 400px wide photo clipped to a circle shape.
-   height: auto keeps the natural aspect ratio of the photo otherwise it looks like an oval */
+   height: auto keeps the natural aspect ratio of the photo, this seems to appear oval on different desktops */
 .profile-img {
     width: 400px;
     height: auto;
@@ -134,7 +134,7 @@ main {
     margin: 1rem 0;
 }
 
-/* .about: Narrows the bio text to 800px and centers it for comfortable reading. */
+/* .about: Narrows the bio text to 800px and centers it*/
 .about {
     max-width: 800px;
     margin: 0 auto 3rem;
@@ -151,20 +151,19 @@ main {
     border-radius: 8px;
 }
 
-/* .location: Italic blue text used to display city/country of a role. */
+/* .location: Italic blue text used to display city of a role. */
 .location {
     color: var(--palette-blue);
     font-style: italic;
 }
 
-/* .degree / .job-title: Bold, dark text that makes the role name stand out. */
+/* .degree / .job-title: Bold, dark text */
 .degree, .job-title {
     font-weight: 600;
     color: var(--palette-navy);
 }
 
-/* .date: Muted, slightly smaller text for date ranges — visually secondary
-   to the role name but still readable. */
+/* .date: Text used to display dates in experience items */
 .date {
     color: var(--palette-lightblue);
     font-size: 0.95rem;
@@ -182,9 +181,7 @@ main li {
     margin-bottom: 0.5rem;
 }
 
-/* =====================
-   SKILLS SECTION
-   ===================== */
+/* Skills Section */
 
 /* .skills-container: Flexbox row of skill category cards.
    flex-wrap: wrap lets them stack vertically on narrow screens. */
@@ -194,7 +191,7 @@ main li {
     flex-wrap: wrap;
 }
 
-/* .skill-category: Each individual skill card (e.g. "Languages", "Tools").
+/* .skill-category: Each individual skill card.
    flex: 1 makes all cards share available width equally.
    min-width: 250px prevents them from getting too narrow before wrapping. */
 .skill-category {
@@ -203,7 +200,6 @@ main li {
     background-color: white;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Resets top margin on the h3 inside a card so there's no extra gap at the top. */
@@ -218,9 +214,7 @@ main li {
     line-height: 1.8;
 }
 
-/* =====================
-   PROJECTS PAGE
-   ===================== */
+/* PROJECTS */
 
 /* .intro: Centered intro paragraph above the projects grid, capped at 800px. */
 .intro {
@@ -233,7 +227,7 @@ main li {
 /* .projects-grid: CSS Grid with two equal columns and a gap between cards. */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -243,15 +237,15 @@ main li {
 .project-card {
     background-color: white;
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;  /*rgba is Red-Green-Blue-Alpha which is the ocapacity of the color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect (Consider adding this to nav bar?) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animated both the box and shadow like the nav links */
 }
 
 /* On hover: lifts the card up 5px and deepens the shadow to emphasise the lift. */
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Moves the card up by 5 pixels on hover for a lift effect. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Makes the shadow a little darker */
 }
 
 /* Resets the top margin on h2 inside a card so it sits flush at the top. */
@@ -276,22 +270,17 @@ main li {
     margin-bottom: 0;
 }
 
-/* =====================
-   LINKS
-   ===================== */
+/* LINKS */
 
 a {
     color: var(--palette-blue);
 }
 
-a:hover,
-a:focus-visible {
+a:hover, a:focus-visible { /* Highlights links on hover and keyboard focus for better accessibility. */
     color: var(--palette-navy);
 }
 
-/* =====================
-   FOOTER
-   ===================== */
+/* FOOTER */
 
 /* footer: Dark bar at the bottom mirroring the header. Light text on dark bg. */
 footer {
@@ -308,7 +297,7 @@ footer a {
     text-decoration: underline;
 }
 
-footer a:hover {
+footer a:hover { /*This is so the links still stay white when you hover over them otherwise they would dissapear */
     color: white;
 }
 
@@ -316,13 +305,11 @@ footer p {
     margin: 0.5rem 0;
 }
 
-/* =====================
-   RESPONSIVE — TABLET (max 768px)
-   ===================== */
+/* IPAD */
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; 
     }
     
     h2 {
@@ -331,10 +318,6 @@ footer p {
     
     nav ul {
         gap: 1rem; /* Tighten nav link spacing on smaller screens */
-    }
-    
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr); /* Halve stats columns from 4 to 2 */
     }
     
     /* .projects-grid: Collapses from 2 columns to 1 so cards don't get too narrow. */
@@ -348,9 +331,7 @@ footer p {
     }
 }
 
-/* =====================
-   RESPONSIVE — MOBILE (max 480px)
-   ===================== */
+/* PHONE */
 
 @media (max-width: 480px) {
     h1 {
