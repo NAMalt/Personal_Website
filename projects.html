@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="description" content="Nick Maltais - Software development projects including AI games, desktop applications, media servers, and bioinformatics research." />
+        <meta name="description" content="Nick Maltais - Software development projects including AI chatbots, desktop applications, games, and media servers." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nick Maltais - Projects</title>
         <link href="styles.css" rel="stylesheet" />
@@ -23,10 +23,50 @@
                 <h1>Projects</h1>
                 <p class="intro">
                     Here are some of the projects I've worked on that showcase my technical 
-                    skills and interests in AI, software development, and computational biology.
+                    skills and interests in AI, software development, and game design.
                 </p>
 
                 <div class="projects-grid">
+
+                    <article class="project-card">
+                        <h2>AI Tutoring Chatbot (PyPal)</h2>
+                        <img src="images/pypal.png" alt="AI Tutoring Chatbot interface showing a conversation between the user and the AI assistant" />
+                        <p>
+                            Developed an AI-powered tutoring assistant for introductory CS students
+                            using Python and a web-based HTML/CSS interface. Integrated the Gemini API
+                            as the language model backend and engineered a 12-rule system prompt to
+                            enforce a Socratic teaching style — guiding students through problems with
+                            targeted hints and code snippets rather than direct solutions.
+                        </p>
+                        <p class="tech-stack"><strong>Tech Stack:</strong> Python, HTML, CSS, Gemini API</p>
+                    </article>
+
+                    <article class="project-card">
+                        <h2>File Browser (Bookshelf Metaphor)</h2>
+                        <img src="images/bookbrowser.png" alt="File browser interface with bookshelf metaphor" />
+                        <p>
+                            Led development of a cross-platform desktop file browser that replaces
+                            traditional files and folders with an intuitive books-and-bookshelves
+                            metaphor. Drove iterative design from Figma prototype to working application,
+                            using usability testing feedback to resolve navigation and discoverability
+                            issues across multiple revisions.
+                        </p>
+                        <p class="tech-stack"><strong>Tech Stack:</strong> Node.js, Electron, Figma</p>
+                    </article>
+
+                    <article class="project-card">
+                        <h2>Pico-8 Platformer</h2>
+                        <img src="images/shadowchaser.png" alt="Pico-8 platformer game interface showing a character navigating a level with platforms and obstacles" />
+                        <p>
+                            Led development of a 4-level platformer built around a shadow mechanic
+                            where a delayed recording of the player's own inputs pursues them, with
+                            difficulty scaling across levels. Redesigned progression and added a
+                            letter-grade replay system (S–C based on death count) in response to
+                            user testing, significantly improving mechanic learnability.
+                        </p>
+                        <p class="tech-stack"><strong>Tech Stack:</strong> Pico-8, Lua</p>
+                    </article>
+
                     <article class="project-card">
                         <h2>Ultimate Tic-Tac-Toe</h2>
                         <img src="images/UltimateTTT.jpg" alt="Ultimate Tic-Tac-Toe game interface showing a 3x3 grid of tic-tac-toe boards with X and O markers" />
@@ -51,6 +91,7 @@
               
                     <article class="project-card">
                         <h2>Home Media Server</h2>
+                        <img src="images/jellyfin.png" alt="Jellyfin media server logo" />
                         <p>
                             Architected a personal streaming solution by repurposing hardware and 
                             deploying Jellyfin on Ubuntu Linux. Successfully configured multi-user 
@@ -58,16 +99,7 @@
                         </p>
                         <p class="tech-stack"><strong>Tech Stack:</strong> Ubuntu Linux, Jellyfin</p>
                     </article>
-                    
-                    <article class="project-card">
-                        <h2>Bioinformatics Research</h2>
-                        <p>
-                            Conducted independent research investigating computational approaches 
-                            to biological data analysis. Explored applications of AI and machine 
-                            learning in genomic sequencing and protein structure prediction.
-                        </p>
-                        <p class="tech-stack"><strong>Focus Areas:</strong> Computational Biology, Machine Learning</p>
-                    </article>
+
                 </div>
             </main>
             
